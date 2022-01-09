@@ -1,0 +1,6283 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "_nftName",
+          "type": "string"
+        }
+      ],
+      "name": "create",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "nftList",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "nftName",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "specialId",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "nftListLength",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_addr",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "sellToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/NftToken.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/NftToken.sol",
+    "exportedSymbols": {
+      "NftToken": [
+        66
+      ]
+    },
+    "id": 67,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "NftToken",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 66,
+        "linearizedBaseContracts": [
+          66
+        ],
+        "name": "NftToken",
+        "nameLocation": "67:8:0",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "NftToken.Nft",
+            "id": 8,
+            "members": [
+              {
+                "constant": false,
+                "id": 3,
+                "mutability": "mutable",
+                "name": "owner",
+                "nameLocation": "111:5:0",
+                "nodeType": "VariableDeclaration",
+                "scope": 8,
+                "src": "103:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 2,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "103:7:0",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5,
+                "mutability": "mutable",
+                "name": "nftName",
+                "nameLocation": "133:7:0",
+                "nodeType": "VariableDeclaration",
+                "scope": 8,
+                "src": "126:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 4,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "126:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 7,
+                "mutability": "mutable",
+                "name": "specialId",
+                "nameLocation": "155:9:0",
+                "nodeType": "VariableDeclaration",
+                "scope": 8,
+                "src": "150:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "150:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Nft",
+            "nameLocation": "89:3:0",
+            "nodeType": "StructDefinition",
+            "scope": 66,
+            "src": "82:89:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "75bea166",
+            "id": 12,
+            "mutability": "mutable",
+            "name": "nftList",
+            "nameLocation": "189:7:0",
+            "nodeType": "VariableDeclaration",
+            "scope": 66,
+            "src": "176:20:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Nft_$8_storage_$dyn_storage",
+              "typeString": "struct NftToken.Nft[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 10,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 9,
+                  "name": "Nft",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 8,
+                  "src": "176:3:0"
+                },
+                "referencedDeclaration": 8,
+                "src": "176:3:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Nft_$8_storage_ptr",
+                  "typeString": "struct NftToken.Nft"
+                }
+              },
+              "id": 11,
+              "nodeType": "ArrayTypeName",
+              "src": "176:5:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Nft_$8_storage_$dyn_storage_ptr",
+                "typeString": "struct NftToken.Nft[]"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 34,
+              "nodeType": "Block",
+              "src": "266:106:0",
+              "statements": [
+                {
+                  "assignments": [
+                    20
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 20,
+                      "mutability": "mutable",
+                      "name": "_specialId",
+                      "nameLocation": "281:10:0",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 34,
+                      "src": "276:15:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 19,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "276:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 23,
+                  "initialValue": {
+                    "expression": {
+                      "id": 21,
+                      "name": "nftList",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 12,
+                      "src": "294:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Nft_$8_storage_$dyn_storage",
+                        "typeString": "struct NftToken.Nft storage ref[] storage ref"
+                      }
+                    },
+                    "id": 22,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "src": "294:14:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "276:32:0"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 28,
+                            "name": "_owner",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 14,
+                            "src": "335:6:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          {
+                            "id": 29,
+                            "name": "_nftName",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 16,
+                            "src": "343:8:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          {
+                            "id": 30,
+                            "name": "_specialId",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 20,
+                            "src": "353:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            },
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "id": 27,
+                          "name": "Nft",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 8,
+                          "src": "331:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_Nft_$8_storage_ptr_$",
+                            "typeString": "type(struct NftToken.Nft storage pointer)"
+                          }
+                        },
+                        "id": 31,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "331:33:0",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Nft_$8_memory_ptr",
+                          "typeString": "struct NftToken.Nft memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Nft_$8_memory_ptr",
+                          "typeString": "struct NftToken.Nft memory"
+                        }
+                      ],
+                      "expression": {
+                        "id": 24,
+                        "name": "nftList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 12,
+                        "src": "318:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Nft_$8_storage_$dyn_storage",
+                          "typeString": "struct NftToken.Nft storage ref[] storage ref"
+                        }
+                      },
+                      "id": 26,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "src": "318:12:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_Nft_$8_storage_$dyn_storage_ptr_$_t_struct$_Nft_$8_storage_$returns$__$bound_to$_t_array$_t_struct$_Nft_$8_storage_$dyn_storage_ptr_$",
+                        "typeString": "function (struct NftToken.Nft storage ref[] storage pointer,struct NftToken.Nft storage ref)"
+                      }
+                    },
+                    "id": 32,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "318:47:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 33,
+                  "nodeType": "ExpressionStatement",
+                  "src": "318:47:0"
+                }
+              ]
+            },
+            "functionSelector": "a15ab08d",
+            "id": 35,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "create",
+            "nameLocation": "212:6:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 17,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14,
+                  "mutability": "mutable",
+                  "name": "_owner",
+                  "nameLocation": "227:6:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "219:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "219:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16,
+                  "mutability": "mutable",
+                  "name": "_nftName",
+                  "nameLocation": "249:8:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "235:22:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 15,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "235:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "218:40:0"
+            },
+            "returnParameters": {
+              "id": 18,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "266:0:0"
+            },
+            "scope": 66,
+            "src": "203:169:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 55,
+              "nodeType": "Block",
+              "src": "432:77:0",
+              "statements": [
+                {
+                  "assignments": [
+                    44
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 44,
+                      "mutability": "mutable",
+                      "name": "nft",
+                      "nameLocation": "454:3:0",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 55,
+                      "src": "442:15:0",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Nft_$8_storage_ptr",
+                        "typeString": "struct NftToken.Nft"
+                      },
+                      "typeName": {
+                        "id": 43,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 42,
+                          "name": "Nft",
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 8,
+                          "src": "442:3:0"
+                        },
+                        "referencedDeclaration": 8,
+                        "src": "442:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Nft_$8_storage_ptr",
+                          "typeString": "struct NftToken.Nft"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 48,
+                  "initialValue": {
+                    "baseExpression": {
+                      "id": 45,
+                      "name": "nftList",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 12,
+                      "src": "460:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Nft_$8_storage_$dyn_storage",
+                        "typeString": "struct NftToken.Nft storage ref[] storage ref"
+                      }
+                    },
+                    "id": 47,
+                    "indexExpression": {
+                      "id": 46,
+                      "name": "_index",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 39,
+                      "src": "468:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "460:15:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Nft_$8_storage",
+                      "typeString": "struct NftToken.Nft storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "442:33:0"
+                },
+                {
+                  "expression": {
+                    "id": 53,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 49,
+                        "name": "nft",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 44,
+                        "src": "485:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Nft_$8_storage_ptr",
+                          "typeString": "struct NftToken.Nft storage pointer"
+                        }
+                      },
+                      "id": 51,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "owner",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3,
+                      "src": "485:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 52,
+                      "name": "_addr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 37,
+                      "src": "497:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "485:17:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 54,
+                  "nodeType": "ExpressionStatement",
+                  "src": "485:17:0"
+                }
+              ]
+            },
+            "functionSelector": "f464e7db",
+            "id": 56,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "sellToken",
+            "nameLocation": "387:9:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 40,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 37,
+                  "mutability": "mutable",
+                  "name": "_addr",
+                  "nameLocation": "405:5:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 56,
+                  "src": "397:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 36,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "397:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 39,
+                  "mutability": "mutable",
+                  "name": "_index",
+                  "nameLocation": "417:6:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 56,
+                  "src": "412:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "412:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "396:28:0"
+            },
+            "returnParameters": {
+              "id": 41,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "432:0:0"
+            },
+            "scope": 66,
+            "src": "378:131:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 64,
+              "nodeType": "Block",
+              "src": "565:38:0",
+              "statements": [
+                {
+                  "expression": {
+                    "expression": {
+                      "id": 61,
+                      "name": "nftList",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 12,
+                      "src": "582:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Nft_$8_storage_$dyn_storage",
+                        "typeString": "struct NftToken.Nft storage ref[] storage ref"
+                      }
+                    },
+                    "id": 62,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "src": "582:14:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 60,
+                  "id": 63,
+                  "nodeType": "Return",
+                  "src": "575:21:0"
+                }
+              ]
+            },
+            "functionSelector": "9eb067f5",
+            "id": 65,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "nftListLength",
+            "nameLocation": "524:13:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 57,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "537:2:0"
+            },
+            "returnParameters": {
+              "id": 60,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 59,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 65,
+                  "src": "560:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 58,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "560:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "559:6:0"
+            },
+            "scope": 66,
+            "src": "515:88:0",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 67,
+        "src": "58:547:0",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:572:0"
+  },
+  "bytecode": "608060405234801561001057600080fd5b50610547806100206000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806375bea166146100515780639eb067f51461007c578063a15ab08d1461008d578063f464e7db146100a2575b600080fd5b61006461005f36600461031c565b6100b5565b60405161007393929190610335565b60405180910390f35b600054604051908152602001610073565b6100a061009b3660046103d4565b61017d565b005b6100a06100b0366004610496565b61023c565b600081815481106100c557600080fd5b6000918252602090912060039091020180546001820180546001600160a01b039092169350906100f4906104c0565b80601f0160208091040260200160405190810160405280929190818152602001828054610120906104c0565b801561016d5780601f106101425761010080835404028352916020019161016d565b820191906000526020600020905b81548152906001019060200180831161015057829003601f168201915b5050505050908060020154905083565b60008054604080516060810182526001600160a01b038681168252602080830187815293830185905260018501865594805281517f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e5636003860290810180546001600160a01b031916929093169190911782559251805194959294919361022a937f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e56490910192910190610283565b50604082015181600201555050505050565b6000808281548110610250576102506104fb565b6000918252602090912060039091020180546001600160a01b0319166001600160a01b0394909416939093179092555050565b82805461028f906104c0565b90600052602060002090601f0160209004810192826102b157600085556102f7565b82601f106102ca57805160ff19168380011785556102f7565b828001600101855582156102f7579182015b828111156102f75782518255916020019190600101906102dc565b50610303929150610307565b5090565b5b808211156103035760008155600101610308565b60006020828403121561032e57600080fd5b5035919050565b60018060a01b038416815260006020606081840152845180606085015260005b8181101561037157868101830151858201608001528201610355565b81811115610383576000608083870101525b5060408401949094525050601f91909101601f19160160800192915050565b80356001600160a01b03811681146103b957600080fd5b919050565b634e487b7160e01b600052604160045260246000fd5b600080604083850312156103e757600080fd5b6103f0836103a2565b9150602083013567ffffffffffffffff8082111561040d57600080fd5b818501915085601f83011261042157600080fd5b813581811115610433576104336103be565b604051601f8201601f19908116603f0116810190838211818310171561045b5761045b6103be565b8160405282815288602084870101111561047457600080fd5b8260208601602083013760006020848301015280955050505050509250929050565b600080604083850312156104a957600080fd5b6104b2836103a2565b946020939093013593505050565b600181811c908216806104d457607f821691505b602082108114156104f557634e487b7160e01b600052602260045260246000fd5b50919050565b634e487b7160e01b600052603260045260246000fdfea2646970667358221220477195400e2d7107fbb2f6dd09edf8fd1cec316964ee5f5de5837b1eb3c213f664736f6c634300080b0033",
+  "bytecodeSha1": "e08716623f71c6901d2011a5943b4624f009d963",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.8.11+commit.d7f03943"
+  },
+  "contractName": "NftToken",
+  "coverageMap": {
+    "branches": {
+      "0": {}
+    },
+    "statements": {
+      "0": {
+        "NftToken.create": {
+          "1": [
+            318,
+            365
+          ]
+        },
+        "NftToken.nftListLength": {
+          "0": [
+            575,
+            596
+          ]
+        },
+        "NftToken.sellToken": {
+          "2": [
+            485,
+            502
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "608060405234801561001057600080fd5b506004361061004c5760003560e01c806375bea166146100515780639eb067f51461007c578063a15ab08d1461008d578063f464e7db146100a2575b600080fd5b61006461005f36600461031c565b6100b5565b60405161007393929190610335565b60405180910390f35b600054604051908152602001610073565b6100a061009b3660046103d4565b61017d565b005b6100a06100b0366004610496565b61023c565b600081815481106100c557600080fd5b6000918252602090912060039091020180546001820180546001600160a01b039092169350906100f4906104c0565b80601f0160208091040260200160405190810160405280929190818152602001828054610120906104c0565b801561016d5780601f106101425761010080835404028352916020019161016d565b820191906000526020600020905b81548152906001019060200180831161015057829003601f168201915b5050505050908060020154905083565b60008054604080516060810182526001600160a01b038681168252602080830187815293830185905260018501865594805281517f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e5636003860290810180546001600160a01b031916929093169190911782559251805194959294919361022a937f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e56490910192910190610283565b50604082015181600201555050505050565b6000808281548110610250576102506104fb565b6000918252602090912060039091020180546001600160a01b0319166001600160a01b0394909416939093179092555050565b82805461028f906104c0565b90600052602060002090601f0160209004810192826102b157600085556102f7565b82601f106102ca57805160ff19168380011785556102f7565b828001600101855582156102f7579182015b828111156102f75782518255916020019190600101906102dc565b50610303929150610307565b5090565b5b808211156103035760008155600101610308565b60006020828403121561032e57600080fd5b5035919050565b60018060a01b038416815260006020606081840152845180606085015260005b8181101561037157868101830151858201608001528201610355565b81811115610383576000608083870101525b5060408401949094525050601f91909101601f19160160800192915050565b80356001600160a01b03811681146103b957600080fd5b919050565b634e487b7160e01b600052604160045260246000fd5b600080604083850312156103e757600080fd5b6103f0836103a2565b9150602083013567ffffffffffffffff8082111561040d57600080fd5b818501915085601f83011261042157600080fd5b813581811115610433576104336103be565b604051601f8201601f19908116603f0116810190838211818310171561045b5761045b6103be565b8160405282815288602084870101111561047457600080fd5b8260208601602083013760006020848301015280955050505050509250929050565b600080604083850312156104a957600080fd5b6104b2836103a2565b946020939093013593505050565b600181811c908216806104d457607f821691505b602082108114156104f557634e487b7160e01b600052602260045260246000fd5b50919050565b634e487b7160e01b600052603260045260246000fdfea2646970667358221220477195400e2d7107fbb2f6dd09edf8fd1cec316964ee5f5de5837b1eb3c213f664736f6c634300080b0033",
+  "deployedSourceMap": "58:547:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;176:20;;;;;;:::i;:::-;;:::i;:::-;;;;;;;;;:::i;:::-;;;;;;;;515:88;560:4;582:14;515:88;;1118:25:1;;;1106:2;1091:18;515:88:0;972:177:1;203:169:0;;;;;;:::i;:::-;;:::i;:::-;;378:131;;;;;;:::i;:::-;;:::i;176:20::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;176:20:0;;;;-1:-1:-1;176:20:0;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;203:169::-;276:15;294:14;;331:33;;;;;;;;-1:-1:-1;;;;;331:33:0;;;;;;;;;;;;;;;;;;318:47;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;;318:47:0;;;;;;;;;;;;;;;294:14;;331:33;;318:47;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;266:106;203:169;;:::o;378:131::-;442:15;460:7;468:6;460:15;;;;;;;;:::i;:::-;;;;;;;;;;;;;;485:17;;-1:-1:-1;;;;;;485:17:0;-1:-1:-1;;;;;485:17:0;;;;;;;;;;;-1:-1:-1;;378:131:0:o;-1:-1:-1:-;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;14:180:1;73:6;126:2;114:9;105:7;101:23;97:32;94:52;;;142:1;139;132:12;94:52;-1:-1:-1;165:23:1;;14:180;-1:-1:-1;14:180:1:o;199:768::-;433:1;429;424:3;420:11;416:19;408:6;404:32;393:9;386:51;367:4;456:2;494;489;478:9;474:18;467:30;526:6;520:13;569:6;564:2;553:9;549:18;542:34;594:1;604:141;618:6;615:1;612:13;604:141;;;714:14;;;710:23;;704:30;679:17;;;698:3;675:27;668:67;633:10;;604:141;;;763:6;760:1;757:13;754:92;;;834:1;828:3;819:6;808:9;804:22;800:32;793:43;754:92;-1:-1:-1;949:2:1;934:18;;927:34;;;;-1:-1:-1;;907:2:1;886:15;;;;-1:-1:-1;;882:29:1;867:45;914:3;863:55;;199:768;-1:-1:-1;;199:768:1:o;1154:173::-;1222:20;;-1:-1:-1;;;;;1271:31:1;;1261:42;;1251:70;;1317:1;1314;1307:12;1251:70;1154:173;;;:::o;1332:127::-;1393:10;1388:3;1384:20;1381:1;1374:31;1424:4;1421:1;1414:15;1448:4;1445:1;1438:15;1464:996;1542:6;1550;1603:2;1591:9;1582:7;1578:23;1574:32;1571:52;;;1619:1;1616;1609:12;1571:52;1642:29;1661:9;1642:29;:::i;:::-;1632:39;;1722:2;1711:9;1707:18;1694:32;1745:18;1786:2;1778:6;1775:14;1772:34;;;1802:1;1799;1792:12;1772:34;1840:6;1829:9;1825:22;1815:32;;1885:7;1878:4;1874:2;1870:13;1866:27;1856:55;;1907:1;1904;1897:12;1856:55;1943:2;1930:16;1965:2;1961;1958:10;1955:36;;;1971:18;;:::i;:::-;2046:2;2040:9;2014:2;2100:13;;-1:-1:-1;;2096:22:1;;;2120:2;2092:31;2088:40;2076:53;;;2144:18;;;2164:22;;;2141:46;2138:72;;;2190:18;;:::i;:::-;2230:10;2226:2;2219:22;2265:2;2257:6;2250:18;2305:7;2300:2;2295;2291;2287:11;2283:20;2280:33;2277:53;;;2326:1;2323;2316:12;2277:53;2382:2;2377;2373;2369:11;2364:2;2356:6;2352:15;2339:46;2427:1;2422:2;2417;2409:6;2405:15;2401:24;2394:35;2448:6;2438:16;;;;;;;1464:996;;;;;:::o;2465:254::-;2533:6;2541;2594:2;2582:9;2573:7;2569:23;2565:32;2562:52;;;2610:1;2607;2600:12;2562:52;2633:29;2652:9;2633:29;:::i;:::-;2623:39;2709:2;2694:18;;;;2681:32;;-1:-1:-1;;;2465:254:1:o;2724:380::-;2803:1;2799:12;;;;2846;;;2867:61;;2921:4;2913:6;2909:17;2899:27;;2867:61;2974:2;2966:6;2963:14;2943:18;2940:38;2937:161;;;3020:10;3015:3;3011:20;3008:1;3001:31;3055:4;3052:1;3045:15;3083:4;3080:1;3073:15;2937:161;;2724:380;;;:::o;3109:127::-;3170:10;3165:3;3161:20;3158:1;3151:31;3201:4;3198:1;3191:15;3225:4;3222:1;3215:15",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    58,
+    605
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH2 0x4C JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x75BEA166 EQ PUSH2 0x51 JUMPI DUP1 PUSH4 0x9EB067F5 EQ PUSH2 0x7C JUMPI DUP1 PUSH4 0xA15AB08D EQ PUSH2 0x8D JUMPI DUP1 PUSH4 0xF464E7DB EQ PUSH2 0xA2 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x64 PUSH2 0x5F CALLDATASIZE PUSH1 0x4 PUSH2 0x31C JUMP JUMPDEST PUSH2 0xB5 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH2 0x73 SWAP4 SWAP3 SWAP2 SWAP1 PUSH2 0x335 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH1 0x0 SLOAD PUSH1 0x40 MLOAD SWAP1 DUP2 MSTORE PUSH1 0x20 ADD PUSH2 0x73 JUMP JUMPDEST PUSH2 0xA0 PUSH2 0x9B CALLDATASIZE PUSH1 0x4 PUSH2 0x3D4 JUMP JUMPDEST PUSH2 0x17D JUMP JUMPDEST STOP JUMPDEST PUSH2 0xA0 PUSH2 0xB0 CALLDATASIZE PUSH1 0x4 PUSH2 0x496 JUMP JUMPDEST PUSH2 0x23C JUMP JUMPDEST PUSH1 0x0 DUP2 DUP2 SLOAD DUP2 LT PUSH2 0xC5 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 SWAP2 DUP3 MSTORE PUSH1 0x20 SWAP1 SWAP2 KECCAK256 PUSH1 0x3 SWAP1 SWAP2 MUL ADD DUP1 SLOAD PUSH1 0x1 DUP3 ADD DUP1 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP3 AND SWAP4 POP SWAP1 PUSH2 0xF4 SWAP1 PUSH2 0x4C0 JUMP JUMPDEST DUP1 PUSH1 0x1F ADD PUSH1 0x20 DUP1 SWAP2 DIV MUL PUSH1 0x20 ADD PUSH1 0x40 MLOAD SWAP1 DUP2 ADD PUSH1 0x40 MSTORE DUP1 SWAP3 SWAP2 SWAP1 DUP2 DUP2 MSTORE PUSH1 0x20 ADD DUP3 DUP1 SLOAD PUSH2 0x120 SWAP1 PUSH2 0x4C0 JUMP JUMPDEST DUP1 ISZERO PUSH2 0x16D JUMPI DUP1 PUSH1 0x1F LT PUSH2 0x142 JUMPI PUSH2 0x100 DUP1 DUP4 SLOAD DIV MUL DUP4 MSTORE SWAP2 PUSH1 0x20 ADD SWAP2 PUSH2 0x16D JUMP JUMPDEST DUP3 ADD SWAP2 SWAP1 PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 KECCAK256 SWAP1 JUMPDEST DUP2 SLOAD DUP2 MSTORE SWAP1 PUSH1 0x1 ADD SWAP1 PUSH1 0x20 ADD DUP1 DUP4 GT PUSH2 0x150 JUMPI DUP3 SWAP1 SUB PUSH1 0x1F AND DUP3 ADD SWAP2 JUMPDEST POP POP POP POP POP SWAP1 DUP1 PUSH1 0x2 ADD SLOAD SWAP1 POP DUP4 JUMP JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0x40 DUP1 MLOAD PUSH1 0x60 DUP2 ADD DUP3 MSTORE PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP7 DUP2 AND DUP3 MSTORE PUSH1 0x20 DUP1 DUP4 ADD DUP8 DUP2 MSTORE SWAP4 DUP4 ADD DUP6 SWAP1 MSTORE PUSH1 0x1 DUP6 ADD DUP7 SSTORE SWAP5 DUP1 MSTORE DUP2 MLOAD PUSH32 0x290DECD9548B62A8D60345A988386FC84BA6BC95484008F6362F93160EF3E563 PUSH1 0x3 DUP7 MUL SWAP1 DUP2 ADD DUP1 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB NOT AND SWAP3 SWAP1 SWAP4 AND SWAP2 SWAP1 SWAP2 OR DUP3 SSTORE SWAP3 MLOAD DUP1 MLOAD SWAP5 SWAP6 SWAP3 SWAP5 SWAP2 SWAP4 PUSH2 0x22A SWAP4 PUSH32 0x290DECD9548B62A8D60345A988386FC84BA6BC95484008F6362F93160EF3E564 SWAP1 SWAP2 ADD SWAP3 SWAP2 ADD SWAP1 PUSH2 0x283 JUMP JUMPDEST POP PUSH1 0x40 DUP3 ADD MLOAD DUP2 PUSH1 0x2 ADD SSTORE POP POP POP POP POP JUMP JUMPDEST PUSH1 0x0 DUP1 DUP3 DUP2 SLOAD DUP2 LT PUSH2 0x250 JUMPI PUSH2 0x250 PUSH2 0x4FB JUMP JUMPDEST PUSH1 0x0 SWAP2 DUP3 MSTORE PUSH1 0x20 SWAP1 SWAP2 KECCAK256 PUSH1 0x3 SWAP1 SWAP2 MUL ADD DUP1 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB NOT AND PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP5 SWAP1 SWAP5 AND SWAP4 SWAP1 SWAP4 OR SWAP1 SWAP3 SSTORE POP POP JUMP JUMPDEST DUP3 DUP1 SLOAD PUSH2 0x28F SWAP1 PUSH2 0x4C0 JUMP JUMPDEST SWAP1 PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 KECCAK256 SWAP1 PUSH1 0x1F ADD PUSH1 0x20 SWAP1 DIV DUP2 ADD SWAP3 DUP3 PUSH2 0x2B1 JUMPI PUSH1 0x0 DUP6 SSTORE PUSH2 0x2F7 JUMP JUMPDEST DUP3 PUSH1 0x1F LT PUSH2 0x2CA JUMPI DUP1 MLOAD PUSH1 0xFF NOT AND DUP4 DUP1 ADD OR DUP6 SSTORE PUSH2 0x2F7 JUMP JUMPDEST DUP3 DUP1 ADD PUSH1 0x1 ADD DUP6 SSTORE DUP3 ISZERO PUSH2 0x2F7 JUMPI SWAP2 DUP3 ADD JUMPDEST DUP3 DUP2 GT ISZERO PUSH2 0x2F7 JUMPI DUP3 MLOAD DUP3 SSTORE SWAP2 PUSH1 0x20 ADD SWAP2 SWAP1 PUSH1 0x1 ADD SWAP1 PUSH2 0x2DC JUMP JUMPDEST POP PUSH2 0x303 SWAP3 SWAP2 POP PUSH2 0x307 JUMP JUMPDEST POP SWAP1 JUMP JUMPDEST JUMPDEST DUP1 DUP3 GT ISZERO PUSH2 0x303 JUMPI PUSH1 0x0 DUP2 SSTORE PUSH1 0x1 ADD PUSH2 0x308 JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 DUP5 SUB SLT ISZERO PUSH2 0x32E JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD SWAP2 SWAP1 POP JUMP JUMPDEST PUSH1 0x1 DUP1 PUSH1 0xA0 SHL SUB DUP5 AND DUP2 MSTORE PUSH1 0x0 PUSH1 0x20 PUSH1 0x60 DUP2 DUP5 ADD MSTORE DUP5 MLOAD DUP1 PUSH1 0x60 DUP6 ADD MSTORE PUSH1 0x0 JUMPDEST DUP2 DUP2 LT ISZERO PUSH2 0x371 JUMPI DUP7 DUP2 ADD DUP4 ADD MLOAD DUP6 DUP3 ADD PUSH1 0x80 ADD MSTORE DUP3 ADD PUSH2 0x355 JUMP JUMPDEST DUP2 DUP2 GT ISZERO PUSH2 0x383 JUMPI PUSH1 0x0 PUSH1 0x80 DUP4 DUP8 ADD ADD MSTORE JUMPDEST POP PUSH1 0x40 DUP5 ADD SWAP5 SWAP1 SWAP5 MSTORE POP POP PUSH1 0x1F SWAP2 SWAP1 SWAP2 ADD PUSH1 0x1F NOT AND ADD PUSH1 0x80 ADD SWAP3 SWAP2 POP POP JUMP JUMPDEST DUP1 CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP2 AND DUP2 EQ PUSH2 0x3B9 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST SWAP2 SWAP1 POP JUMP JUMPDEST PUSH4 0x4E487B71 PUSH1 0xE0 SHL PUSH1 0x0 MSTORE PUSH1 0x41 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH1 0x0 REVERT JUMPDEST PUSH1 0x0 DUP1 PUSH1 0x40 DUP4 DUP6 SUB SLT ISZERO PUSH2 0x3E7 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x3F0 DUP4 PUSH2 0x3A2 JUMP JUMPDEST SWAP2 POP PUSH1 0x20 DUP4 ADD CALLDATALOAD PUSH8 0xFFFFFFFFFFFFFFFF DUP1 DUP3 GT ISZERO PUSH2 0x40D JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 DUP6 ADD SWAP2 POP DUP6 PUSH1 0x1F DUP4 ADD SLT PUSH2 0x421 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 CALLDATALOAD DUP2 DUP2 GT ISZERO PUSH2 0x433 JUMPI PUSH2 0x433 PUSH2 0x3BE JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH1 0x1F DUP3 ADD PUSH1 0x1F NOT SWAP1 DUP2 AND PUSH1 0x3F ADD AND DUP2 ADD SWAP1 DUP4 DUP3 GT DUP2 DUP4 LT OR ISZERO PUSH2 0x45B JUMPI PUSH2 0x45B PUSH2 0x3BE JUMP JUMPDEST DUP2 PUSH1 0x40 MSTORE DUP3 DUP2 MSTORE DUP9 PUSH1 0x20 DUP5 DUP8 ADD ADD GT ISZERO PUSH2 0x474 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP3 PUSH1 0x20 DUP7 ADD PUSH1 0x20 DUP4 ADD CALLDATACOPY PUSH1 0x0 PUSH1 0x20 DUP5 DUP4 ADD ADD MSTORE DUP1 SWAP6 POP POP POP POP POP POP SWAP3 POP SWAP3 SWAP1 POP JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH1 0x40 DUP4 DUP6 SUB SLT ISZERO PUSH2 0x4A9 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x4B2 DUP4 PUSH2 0x3A2 JUMP JUMPDEST SWAP5 PUSH1 0x20 SWAP4 SWAP1 SWAP4 ADD CALLDATALOAD SWAP4 POP POP POP JUMP JUMPDEST PUSH1 0x1 DUP2 DUP2 SHR SWAP1 DUP3 AND DUP1 PUSH2 0x4D4 JUMPI PUSH1 0x7F DUP3 AND SWAP2 POP JUMPDEST PUSH1 0x20 DUP3 LT DUP2 EQ ISZERO PUSH2 0x4F5 JUMPI PUSH4 0x4E487B71 PUSH1 0xE0 SHL PUSH1 0x0 MSTORE PUSH1 0x22 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH1 0x0 REVERT JUMPDEST POP SWAP2 SWAP1 POP JUMP JUMPDEST PUSH4 0x4E487B71 PUSH1 0xE0 SHL PUSH1 0x0 MSTORE PUSH1 0x32 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH1 0x0 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 SELFBALANCE PUSH18 0x95400E2D7107FBB2F6DD09EDF8FD1CEC3169 PUSH5 0xEE5F5DE583 PUSH28 0x1EB3C213F664736F6C634300080B0033000000000000000000000000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        58,
+        605
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x10"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "14": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "15": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "21": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "22": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x4C"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "28": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xE0"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "SHR",
+      "path": "0"
+    },
+    "32": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "33": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x75BEA166"
+    },
+    "38": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x51"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "43": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "44": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x9EB067F5"
+    },
+    "49": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x7C"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "54": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "55": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xA15AB08D"
+    },
+    "60": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "61": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x8D"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "65": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "66": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xF464E7DB"
+    },
+    "71": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "72": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xA2"
+    },
+    "75": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "76": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "77": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "79": {
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "80": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        58,
+        605
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "81": {
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "82": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x64"
+    },
+    "85": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x5F"
+    },
+    "88": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "89": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "91": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x31C"
+    },
+    "94": {
+      "fn": null,
+      "jump": "i",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "95": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "96": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xB5"
+    },
+    "99": {
+      "fn": null,
+      "jump": "i",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "100": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "101": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "103": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "104": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x73"
+    },
+    "107": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "108": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "109": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "110": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "111": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x335"
+    },
+    "114": {
+      "fn": null,
+      "jump": "i",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "115": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "116": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "118": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "119": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "120": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "121": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "122": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "123": {
+      "fn": null,
+      "offset": [
+        176,
+        196
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "124": {
+      "fn": "NftToken.nftListLength",
+      "offset": [
+        515,
+        603
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "125": {
+      "fn": "NftToken.nftListLength",
+      "offset": [
+        560,
+        564
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "127": {
+      "fn": "NftToken.nftListLength",
+      "offset": [
+        582,
+        596
+      ],
+      "op": "SLOAD",
+      "path": "0",
+      "statement": 0
+    },
+    "128": {
+      "fn": "NftToken.nftListLength",
+      "offset": [
+        515,
+        603
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "130": {
+      "fn": "NftToken.nftListLength",
+      "offset": [
+        515,
+        603
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "131": {
+      "op": "SWAP1"
+    },
+    "132": {
+      "op": "DUP2"
+    },
+    "133": {
+      "op": "MSTORE"
+    },
+    "134": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "136": {
+      "op": "ADD"
+    },
+    "137": {
+      "fn": "NftToken.nftListLength",
+      "offset": [
+        515,
+        603
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x73"
+    },
+    "140": {
+      "op": "JUMP"
+    },
+    "141": {
+      "fn": "NftToken.create",
+      "offset": [
+        203,
+        372
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "142": {
+      "fn": "NftToken.create",
+      "offset": [
+        203,
+        372
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xA0"
+    },
+    "145": {
+      "fn": "NftToken.create",
+      "offset": [
+        203,
+        372
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x9B"
+    },
+    "148": {
+      "fn": "NftToken.create",
+      "offset": [
+        203,
+        372
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "149": {
+      "fn": "NftToken.create",
+      "offset": [
+        203,
+        372
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "151": {
+      "fn": "NftToken.create",
+      "offset": [
+        203,
+        372
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x3D4"
+    },
+    "154": {
+      "fn": "NftToken.create",
+      "jump": "i",
+      "offset": [
+        203,
+        372
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "155": {
+      "fn": "NftToken.create",
+      "offset": [
+        203,
+        372
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "156": {
+      "fn": "NftToken.create",
+      "offset": [
+        203,
+        372
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x17D"
+    },
+    "159": {
+      "fn": "NftToken.create",
+      "jump": "i",
+      "offset": [
+        203,
+        372
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "160": {
+      "fn": "NftToken.create",
+      "offset": [
+        203,
+        372
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "161": {
+      "fn": "NftToken.create",
+      "offset": [
+        203,
+        372
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "162": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        378,
+        509
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "163": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        378,
+        509
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xA0"
+    },
+    "166": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        378,
+        509
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xB0"
+    },
+    "169": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        378,
+        509
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "170": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        378,
+        509
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "172": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        378,
+        509
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x496"
+    },
+    "175": {
+      "fn": "NftToken.sellToken",
+      "jump": "i",
+      "offset": [
+        378,
+        509
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "176": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        378,
+        509
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "177": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        378,
+        509
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x23C"
+    },
+    "180": {
+      "fn": "NftToken.sellToken",
+      "jump": "i",
+      "offset": [
+        378,
+        509
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "181": {
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "182": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "184": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "185": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "186": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "187": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "188": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "189": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xC5"
+    },
+    "192": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "193": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "195": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "196": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "197": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "198": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "200": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "201": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "202": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "203": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "205": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "206": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "207": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "208": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x3"
+    },
+    "210": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "211": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "212": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "213": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "214": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "215": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "216": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "218": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "219": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "220": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "221": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "222": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "224": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "226": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "228": {
+      "op": "SHL"
+    },
+    "229": {
+      "op": "SUB"
+    },
+    "230": {
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "231": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "232": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "233": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "234": {
+      "op": "POP"
+    },
+    "235": {
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "236": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xF4"
+    },
+    "239": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "240": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x4C0"
+    },
+    "243": {
+      "fn": "NftToken.sellToken",
+      "jump": "i",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "244": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "245": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "246": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1F"
+    },
+    "248": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "249": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "251": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "252": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "253": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "254": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "255": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "257": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "258": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "260": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "261": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "262": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "263": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "264": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "266": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "267": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "268": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "269": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "270": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "271": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "272": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "273": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "274": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "276": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "277": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "278": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "279": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "280": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x120"
+    },
+    "283": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "284": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x4C0"
+    },
+    "287": {
+      "fn": "NftToken.sellToken",
+      "jump": "i",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "288": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "289": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "290": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "291": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x16D"
+    },
+    "294": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "295": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "296": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1F"
+    },
+    "298": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "299": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x142"
+    },
+    "302": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "303": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x100"
+    },
+    "306": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "307": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "308": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "309": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "310": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "311": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "312": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "313": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "314": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "316": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "317": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "318": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x16D"
+    },
+    "321": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "322": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "323": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "324": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "325": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "326": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "327": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "329": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "330": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "332": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "334": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "335": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "336": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "337": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "338": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "339": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "340": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "341": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "342": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "344": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "345": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "346": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "348": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "349": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "350": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "351": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "GT",
+      "path": "0"
+    },
+    "352": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x150"
+    },
+    "355": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "356": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "357": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "358": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "359": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1F"
+    },
+    "361": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "362": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "363": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "364": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "365": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "366": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "367": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "368": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "369": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "370": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "371": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "372": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "373": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x2"
+    },
+    "375": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "376": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "377": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "378": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "379": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "380": {
+      "fn": "NftToken.sellToken",
+      "jump": "o",
+      "offset": [
+        176,
+        196
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "381": {
+      "fn": "NftToken.create",
+      "offset": [
+        203,
+        372
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "382": {
+      "fn": "NftToken.create",
+      "offset": [
+        276,
+        291
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "384": {
+      "fn": "NftToken.create",
+      "offset": [
+        294,
+        308
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "385": {
+      "fn": "NftToken.create",
+      "offset": [
+        294,
+        308
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "386": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 1,
+      "value": "0x40"
+    },
+    "388": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "389": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "390": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x60"
+    },
+    "392": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "393": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "394": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "395": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "396": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "398": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "400": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "402": {
+      "op": "SHL"
+    },
+    "403": {
+      "op": "SUB"
+    },
+    "404": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "DUP7",
+      "path": "0"
+    },
+    "405": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "406": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "407": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "408": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "409": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "411": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "412": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "413": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "414": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "DUP8",
+      "path": "0"
+    },
+    "415": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "416": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "417": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "418": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "419": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "420": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "421": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "422": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "423": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "425": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "426": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "427": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "DUP7",
+      "path": "0"
+    },
+    "428": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "429": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SWAP5",
+      "path": "0"
+    },
+    "430": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "431": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "432": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "433": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "434": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "PUSH32",
+      "path": "0",
+      "value": "0x290DECD9548B62A8D60345A988386FC84BA6BC95484008F6362F93160EF3E563"
+    },
+    "467": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x3"
+    },
+    "469": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "DUP7",
+      "path": "0"
+    },
+    "470": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "471": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "472": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "473": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "474": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "475": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "476": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "478": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "480": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "482": {
+      "op": "SHL"
+    },
+    "483": {
+      "op": "SUB"
+    },
+    "484": {
+      "op": "NOT"
+    },
+    "485": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "486": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "487": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "488": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "489": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "490": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "491": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "492": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "493": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "OR",
+      "path": "0"
+    },
+    "494": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "495": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "496": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "497": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "498": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "499": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "500": {
+      "fn": "NftToken.create",
+      "offset": [
+        294,
+        308
+      ],
+      "op": "SWAP5",
+      "path": "0"
+    },
+    "501": {
+      "fn": "NftToken.create",
+      "offset": [
+        294,
+        308
+      ],
+      "op": "SWAP6",
+      "path": "0"
+    },
+    "502": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "503": {
+      "fn": "NftToken.create",
+      "offset": [
+        331,
+        364
+      ],
+      "op": "SWAP5",
+      "path": "0"
+    },
+    "504": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "505": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "506": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x22A"
+    },
+    "509": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "510": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "PUSH32",
+      "path": "0",
+      "value": "0x290DECD9548B62A8D60345A988386FC84BA6BC95484008F6362F93160EF3E564"
+    },
+    "543": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "544": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "545": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "546": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "547": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "548": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "549": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "550": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x283"
+    },
+    "553": {
+      "fn": "NftToken.create",
+      "jump": "i",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "554": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "555": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "556": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "558": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "559": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "560": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "561": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "562": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x2"
+    },
+    "564": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "565": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "566": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "567": {
+      "fn": "NftToken.create",
+      "offset": [
+        318,
+        365
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "568": {
+      "fn": "NftToken.create",
+      "offset": [
+        266,
+        372
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "569": {
+      "fn": "NftToken.create",
+      "offset": [
+        203,
+        372
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "570": {
+      "fn": "NftToken.create",
+      "offset": [
+        203,
+        372
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "571": {
+      "fn": "NftToken.create",
+      "jump": "o",
+      "offset": [
+        203,
+        372
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "572": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        378,
+        509
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "573": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        442,
+        457
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "575": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        467
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "576": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        468,
+        474
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "577": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "578": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "579": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "580": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "581": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x250"
+    },
+    "584": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "585": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x250"
+    },
+    "588": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x4FB"
+    },
+    "591": {
+      "fn": "NftToken.sellToken",
+      "jump": "i",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "592": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "593": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "595": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "596": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "597": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "598": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "600": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "601": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "602": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "603": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x3"
+    },
+    "605": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "606": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "607": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "608": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        460,
+        475
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "609": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        485,
+        502
+      ],
+      "op": "DUP1",
+      "path": "0",
+      "statement": 2
+    },
+    "610": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        485,
+        502
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "611": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "613": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "615": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "617": {
+      "op": "SHL"
+    },
+    "618": {
+      "op": "SUB"
+    },
+    "619": {
+      "op": "NOT"
+    },
+    "620": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        485,
+        502
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "621": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "623": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "625": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "627": {
+      "op": "SHL"
+    },
+    "628": {
+      "op": "SUB"
+    },
+    "629": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        485,
+        502
+      ],
+      "op": "SWAP5",
+      "path": "0"
+    },
+    "630": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        485,
+        502
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "631": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        485,
+        502
+      ],
+      "op": "SWAP5",
+      "path": "0"
+    },
+    "632": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        485,
+        502
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "633": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        485,
+        502
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "634": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        485,
+        502
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "635": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        485,
+        502
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "636": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        485,
+        502
+      ],
+      "op": "OR",
+      "path": "0"
+    },
+    "637": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        485,
+        502
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "638": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        485,
+        502
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "639": {
+      "fn": "NftToken.sellToken",
+      "offset": [
+        485,
+        502
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "640": {
+      "op": "POP"
+    },
+    "641": {
+      "op": "POP"
+    },
+    "642": {
+      "fn": "NftToken.sellToken",
+      "jump": "o",
+      "offset": [
+        378,
+        509
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "643": {
+      "op": "JUMPDEST"
+    },
+    "644": {
+      "op": "DUP3"
+    },
+    "645": {
+      "op": "DUP1"
+    },
+    "646": {
+      "op": "SLOAD"
+    },
+    "647": {
+      "op": "PUSH2",
+      "value": "0x28F"
+    },
+    "650": {
+      "op": "SWAP1"
+    },
+    "651": {
+      "op": "PUSH2",
+      "value": "0x4C0"
+    },
+    "654": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "655": {
+      "op": "JUMPDEST"
+    },
+    "656": {
+      "op": "SWAP1"
+    },
+    "657": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "659": {
+      "op": "MSTORE"
+    },
+    "660": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "662": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "664": {
+      "op": "KECCAK256"
+    },
+    "665": {
+      "op": "SWAP1"
+    },
+    "666": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "668": {
+      "op": "ADD"
+    },
+    "669": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "671": {
+      "op": "SWAP1"
+    },
+    "672": {
+      "op": "DIV"
+    },
+    "673": {
+      "op": "DUP2"
+    },
+    "674": {
+      "op": "ADD"
+    },
+    "675": {
+      "op": "SWAP3"
+    },
+    "676": {
+      "op": "DUP3"
+    },
+    "677": {
+      "op": "PUSH2",
+      "value": "0x2B1"
+    },
+    "680": {
+      "op": "JUMPI"
+    },
+    "681": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "683": {
+      "op": "DUP6"
+    },
+    "684": {
+      "op": "SSTORE"
+    },
+    "685": {
+      "op": "PUSH2",
+      "value": "0x2F7"
+    },
+    "688": {
+      "op": "JUMP"
+    },
+    "689": {
+      "op": "JUMPDEST"
+    },
+    "690": {
+      "op": "DUP3"
+    },
+    "691": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "693": {
+      "op": "LT"
+    },
+    "694": {
+      "op": "PUSH2",
+      "value": "0x2CA"
+    },
+    "697": {
+      "op": "JUMPI"
+    },
+    "698": {
+      "op": "DUP1"
+    },
+    "699": {
+      "op": "MLOAD"
+    },
+    "700": {
+      "op": "PUSH1",
+      "value": "0xFF"
+    },
+    "702": {
+      "op": "NOT"
+    },
+    "703": {
+      "op": "AND"
+    },
+    "704": {
+      "op": "DUP4"
+    },
+    "705": {
+      "op": "DUP1"
+    },
+    "706": {
+      "op": "ADD"
+    },
+    "707": {
+      "op": "OR"
+    },
+    "708": {
+      "op": "DUP6"
+    },
+    "709": {
+      "op": "SSTORE"
+    },
+    "710": {
+      "op": "PUSH2",
+      "value": "0x2F7"
+    },
+    "713": {
+      "op": "JUMP"
+    },
+    "714": {
+      "op": "JUMPDEST"
+    },
+    "715": {
+      "op": "DUP3"
+    },
+    "716": {
+      "op": "DUP1"
+    },
+    "717": {
+      "op": "ADD"
+    },
+    "718": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "720": {
+      "op": "ADD"
+    },
+    "721": {
+      "op": "DUP6"
+    },
+    "722": {
+      "op": "SSTORE"
+    },
+    "723": {
+      "op": "DUP3"
+    },
+    "724": {
+      "op": "ISZERO"
+    },
+    "725": {
+      "op": "PUSH2",
+      "value": "0x2F7"
+    },
+    "728": {
+      "op": "JUMPI"
+    },
+    "729": {
+      "op": "SWAP2"
+    },
+    "730": {
+      "op": "DUP3"
+    },
+    "731": {
+      "op": "ADD"
+    },
+    "732": {
+      "op": "JUMPDEST"
+    },
+    "733": {
+      "op": "DUP3"
+    },
+    "734": {
+      "op": "DUP2"
+    },
+    "735": {
+      "op": "GT"
+    },
+    "736": {
+      "op": "ISZERO"
+    },
+    "737": {
+      "op": "PUSH2",
+      "value": "0x2F7"
+    },
+    "740": {
+      "op": "JUMPI"
+    },
+    "741": {
+      "op": "DUP3"
+    },
+    "742": {
+      "op": "MLOAD"
+    },
+    "743": {
+      "op": "DUP3"
+    },
+    "744": {
+      "op": "SSTORE"
+    },
+    "745": {
+      "op": "SWAP2"
+    },
+    "746": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "748": {
+      "op": "ADD"
+    },
+    "749": {
+      "op": "SWAP2"
+    },
+    "750": {
+      "op": "SWAP1"
+    },
+    "751": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "753": {
+      "op": "ADD"
+    },
+    "754": {
+      "op": "SWAP1"
+    },
+    "755": {
+      "op": "PUSH2",
+      "value": "0x2DC"
+    },
+    "758": {
+      "op": "JUMP"
+    },
+    "759": {
+      "op": "JUMPDEST"
+    },
+    "760": {
+      "op": "POP"
+    },
+    "761": {
+      "op": "PUSH2",
+      "value": "0x303"
+    },
+    "764": {
+      "op": "SWAP3"
+    },
+    "765": {
+      "op": "SWAP2"
+    },
+    "766": {
+      "op": "POP"
+    },
+    "767": {
+      "op": "PUSH2",
+      "value": "0x307"
+    },
+    "770": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "771": {
+      "op": "JUMPDEST"
+    },
+    "772": {
+      "op": "POP"
+    },
+    "773": {
+      "op": "SWAP1"
+    },
+    "774": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "775": {
+      "op": "JUMPDEST"
+    },
+    "776": {
+      "op": "JUMPDEST"
+    },
+    "777": {
+      "op": "DUP1"
+    },
+    "778": {
+      "op": "DUP3"
+    },
+    "779": {
+      "op": "GT"
+    },
+    "780": {
+      "op": "ISZERO"
+    },
+    "781": {
+      "op": "PUSH2",
+      "value": "0x303"
+    },
+    "784": {
+      "op": "JUMPI"
+    },
+    "785": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "787": {
+      "op": "DUP2"
+    },
+    "788": {
+      "op": "SSTORE"
+    },
+    "789": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "791": {
+      "op": "ADD"
+    },
+    "792": {
+      "op": "PUSH2",
+      "value": "0x308"
+    },
+    "795": {
+      "op": "JUMP"
+    },
+    "796": {
+      "op": "JUMPDEST"
+    },
+    "797": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "799": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "801": {
+      "op": "DUP3"
+    },
+    "802": {
+      "op": "DUP5"
+    },
+    "803": {
+      "op": "SUB"
+    },
+    "804": {
+      "op": "SLT"
+    },
+    "805": {
+      "op": "ISZERO"
+    },
+    "806": {
+      "op": "PUSH2",
+      "value": "0x32E"
+    },
+    "809": {
+      "op": "JUMPI"
+    },
+    "810": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "812": {
+      "op": "DUP1"
+    },
+    "813": {
+      "op": "REVERT"
+    },
+    "814": {
+      "op": "JUMPDEST"
+    },
+    "815": {
+      "op": "POP"
+    },
+    "816": {
+      "op": "CALLDATALOAD"
+    },
+    "817": {
+      "op": "SWAP2"
+    },
+    "818": {
+      "op": "SWAP1"
+    },
+    "819": {
+      "op": "POP"
+    },
+    "820": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "821": {
+      "op": "JUMPDEST"
+    },
+    "822": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "824": {
+      "op": "DUP1"
+    },
+    "825": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "827": {
+      "op": "SHL"
+    },
+    "828": {
+      "op": "SUB"
+    },
+    "829": {
+      "op": "DUP5"
+    },
+    "830": {
+      "op": "AND"
+    },
+    "831": {
+      "op": "DUP2"
+    },
+    "832": {
+      "op": "MSTORE"
+    },
+    "833": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "835": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "837": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "839": {
+      "op": "DUP2"
+    },
+    "840": {
+      "op": "DUP5"
+    },
+    "841": {
+      "op": "ADD"
+    },
+    "842": {
+      "op": "MSTORE"
+    },
+    "843": {
+      "op": "DUP5"
+    },
+    "844": {
+      "op": "MLOAD"
+    },
+    "845": {
+      "op": "DUP1"
+    },
+    "846": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "848": {
+      "op": "DUP6"
+    },
+    "849": {
+      "op": "ADD"
+    },
+    "850": {
+      "op": "MSTORE"
+    },
+    "851": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "853": {
+      "op": "JUMPDEST"
+    },
+    "854": {
+      "op": "DUP2"
+    },
+    "855": {
+      "op": "DUP2"
+    },
+    "856": {
+      "op": "LT"
+    },
+    "857": {
+      "op": "ISZERO"
+    },
+    "858": {
+      "op": "PUSH2",
+      "value": "0x371"
+    },
+    "861": {
+      "op": "JUMPI"
+    },
+    "862": {
+      "op": "DUP7"
+    },
+    "863": {
+      "op": "DUP2"
+    },
+    "864": {
+      "op": "ADD"
+    },
+    "865": {
+      "op": "DUP4"
+    },
+    "866": {
+      "op": "ADD"
+    },
+    "867": {
+      "op": "MLOAD"
+    },
+    "868": {
+      "op": "DUP6"
+    },
+    "869": {
+      "op": "DUP3"
+    },
+    "870": {
+      "op": "ADD"
+    },
+    "871": {
+      "op": "PUSH1",
+      "value": "0x80"
+    },
+    "873": {
+      "op": "ADD"
+    },
+    "874": {
+      "op": "MSTORE"
+    },
+    "875": {
+      "op": "DUP3"
+    },
+    "876": {
+      "op": "ADD"
+    },
+    "877": {
+      "op": "PUSH2",
+      "value": "0x355"
+    },
+    "880": {
+      "op": "JUMP"
+    },
+    "881": {
+      "op": "JUMPDEST"
+    },
+    "882": {
+      "op": "DUP2"
+    },
+    "883": {
+      "op": "DUP2"
+    },
+    "884": {
+      "op": "GT"
+    },
+    "885": {
+      "op": "ISZERO"
+    },
+    "886": {
+      "op": "PUSH2",
+      "value": "0x383"
+    },
+    "889": {
+      "op": "JUMPI"
+    },
+    "890": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "892": {
+      "op": "PUSH1",
+      "value": "0x80"
+    },
+    "894": {
+      "op": "DUP4"
+    },
+    "895": {
+      "op": "DUP8"
+    },
+    "896": {
+      "op": "ADD"
+    },
+    "897": {
+      "op": "ADD"
+    },
+    "898": {
+      "op": "MSTORE"
+    },
+    "899": {
+      "op": "JUMPDEST"
+    },
+    "900": {
+      "op": "POP"
+    },
+    "901": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "903": {
+      "op": "DUP5"
+    },
+    "904": {
+      "op": "ADD"
+    },
+    "905": {
+      "op": "SWAP5"
+    },
+    "906": {
+      "op": "SWAP1"
+    },
+    "907": {
+      "op": "SWAP5"
+    },
+    "908": {
+      "op": "MSTORE"
+    },
+    "909": {
+      "op": "POP"
+    },
+    "910": {
+      "op": "POP"
+    },
+    "911": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "913": {
+      "op": "SWAP2"
+    },
+    "914": {
+      "op": "SWAP1"
+    },
+    "915": {
+      "op": "SWAP2"
+    },
+    "916": {
+      "op": "ADD"
+    },
+    "917": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "919": {
+      "op": "NOT"
+    },
+    "920": {
+      "op": "AND"
+    },
+    "921": {
+      "op": "ADD"
+    },
+    "922": {
+      "op": "PUSH1",
+      "value": "0x80"
+    },
+    "924": {
+      "op": "ADD"
+    },
+    "925": {
+      "op": "SWAP3"
+    },
+    "926": {
+      "op": "SWAP2"
+    },
+    "927": {
+      "op": "POP"
+    },
+    "928": {
+      "op": "POP"
+    },
+    "929": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "930": {
+      "op": "JUMPDEST"
+    },
+    "931": {
+      "op": "DUP1"
+    },
+    "932": {
+      "op": "CALLDATALOAD"
+    },
+    "933": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "935": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "937": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "939": {
+      "op": "SHL"
+    },
+    "940": {
+      "op": "SUB"
+    },
+    "941": {
+      "op": "DUP2"
+    },
+    "942": {
+      "op": "AND"
+    },
+    "943": {
+      "op": "DUP2"
+    },
+    "944": {
+      "op": "EQ"
+    },
+    "945": {
+      "op": "PUSH2",
+      "value": "0x3B9"
+    },
+    "948": {
+      "op": "JUMPI"
+    },
+    "949": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "951": {
+      "op": "DUP1"
+    },
+    "952": {
+      "op": "REVERT"
+    },
+    "953": {
+      "op": "JUMPDEST"
+    },
+    "954": {
+      "op": "SWAP2"
+    },
+    "955": {
+      "op": "SWAP1"
+    },
+    "956": {
+      "op": "POP"
+    },
+    "957": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "958": {
+      "op": "JUMPDEST"
+    },
+    "959": {
+      "op": "PUSH4",
+      "value": "0x4E487B71"
+    },
+    "964": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "966": {
+      "op": "SHL"
+    },
+    "967": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "969": {
+      "op": "MSTORE"
+    },
+    "970": {
+      "op": "PUSH1",
+      "value": "0x41"
+    },
+    "972": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "974": {
+      "op": "MSTORE"
+    },
+    "975": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "977": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "979": {
+      "op": "REVERT"
+    },
+    "980": {
+      "op": "JUMPDEST"
+    },
+    "981": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "983": {
+      "op": "DUP1"
+    },
+    "984": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "986": {
+      "op": "DUP4"
+    },
+    "987": {
+      "op": "DUP6"
+    },
+    "988": {
+      "op": "SUB"
+    },
+    "989": {
+      "op": "SLT"
+    },
+    "990": {
+      "op": "ISZERO"
+    },
+    "991": {
+      "op": "PUSH2",
+      "value": "0x3E7"
+    },
+    "994": {
+      "op": "JUMPI"
+    },
+    "995": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "997": {
+      "op": "DUP1"
+    },
+    "998": {
+      "op": "REVERT"
+    },
+    "999": {
+      "op": "JUMPDEST"
+    },
+    "1000": {
+      "op": "PUSH2",
+      "value": "0x3F0"
+    },
+    "1003": {
+      "op": "DUP4"
+    },
+    "1004": {
+      "op": "PUSH2",
+      "value": "0x3A2"
+    },
+    "1007": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "1008": {
+      "op": "JUMPDEST"
+    },
+    "1009": {
+      "op": "SWAP2"
+    },
+    "1010": {
+      "op": "POP"
+    },
+    "1011": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1013": {
+      "op": "DUP4"
+    },
+    "1014": {
+      "op": "ADD"
+    },
+    "1015": {
+      "op": "CALLDATALOAD"
+    },
+    "1016": {
+      "op": "PUSH8",
+      "value": "0xFFFFFFFFFFFFFFFF"
+    },
+    "1025": {
+      "op": "DUP1"
+    },
+    "1026": {
+      "op": "DUP3"
+    },
+    "1027": {
+      "op": "GT"
+    },
+    "1028": {
+      "op": "ISZERO"
+    },
+    "1029": {
+      "op": "PUSH2",
+      "value": "0x40D"
+    },
+    "1032": {
+      "op": "JUMPI"
+    },
+    "1033": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1035": {
+      "op": "DUP1"
+    },
+    "1036": {
+      "op": "REVERT"
+    },
+    "1037": {
+      "op": "JUMPDEST"
+    },
+    "1038": {
+      "op": "DUP2"
+    },
+    "1039": {
+      "op": "DUP6"
+    },
+    "1040": {
+      "op": "ADD"
+    },
+    "1041": {
+      "op": "SWAP2"
+    },
+    "1042": {
+      "op": "POP"
+    },
+    "1043": {
+      "op": "DUP6"
+    },
+    "1044": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "1046": {
+      "op": "DUP4"
+    },
+    "1047": {
+      "op": "ADD"
+    },
+    "1048": {
+      "op": "SLT"
+    },
+    "1049": {
+      "op": "PUSH2",
+      "value": "0x421"
+    },
+    "1052": {
+      "op": "JUMPI"
+    },
+    "1053": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1055": {
+      "op": "DUP1"
+    },
+    "1056": {
+      "op": "REVERT"
+    },
+    "1057": {
+      "op": "JUMPDEST"
+    },
+    "1058": {
+      "op": "DUP2"
+    },
+    "1059": {
+      "op": "CALLDATALOAD"
+    },
+    "1060": {
+      "op": "DUP2"
+    },
+    "1061": {
+      "op": "DUP2"
+    },
+    "1062": {
+      "op": "GT"
+    },
+    "1063": {
+      "op": "ISZERO"
+    },
+    "1064": {
+      "op": "PUSH2",
+      "value": "0x433"
+    },
+    "1067": {
+      "op": "JUMPI"
+    },
+    "1068": {
+      "op": "PUSH2",
+      "value": "0x433"
+    },
+    "1071": {
+      "op": "PUSH2",
+      "value": "0x3BE"
+    },
+    "1074": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "1075": {
+      "op": "JUMPDEST"
+    },
+    "1076": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "1078": {
+      "op": "MLOAD"
+    },
+    "1079": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "1081": {
+      "op": "DUP3"
+    },
+    "1082": {
+      "op": "ADD"
+    },
+    "1083": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "1085": {
+      "op": "NOT"
+    },
+    "1086": {
+      "op": "SWAP1"
+    },
+    "1087": {
+      "op": "DUP2"
+    },
+    "1088": {
+      "op": "AND"
+    },
+    "1089": {
+      "op": "PUSH1",
+      "value": "0x3F"
+    },
+    "1091": {
+      "op": "ADD"
+    },
+    "1092": {
+      "op": "AND"
+    },
+    "1093": {
+      "op": "DUP2"
+    },
+    "1094": {
+      "op": "ADD"
+    },
+    "1095": {
+      "op": "SWAP1"
+    },
+    "1096": {
+      "op": "DUP4"
+    },
+    "1097": {
+      "op": "DUP3"
+    },
+    "1098": {
+      "op": "GT"
+    },
+    "1099": {
+      "op": "DUP2"
+    },
+    "1100": {
+      "op": "DUP4"
+    },
+    "1101": {
+      "op": "LT"
+    },
+    "1102": {
+      "op": "OR"
+    },
+    "1103": {
+      "op": "ISZERO"
+    },
+    "1104": {
+      "op": "PUSH2",
+      "value": "0x45B"
+    },
+    "1107": {
+      "op": "JUMPI"
+    },
+    "1108": {
+      "op": "PUSH2",
+      "value": "0x45B"
+    },
+    "1111": {
+      "op": "PUSH2",
+      "value": "0x3BE"
+    },
+    "1114": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "1115": {
+      "op": "JUMPDEST"
+    },
+    "1116": {
+      "op": "DUP2"
+    },
+    "1117": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "1119": {
+      "op": "MSTORE"
+    },
+    "1120": {
+      "op": "DUP3"
+    },
+    "1121": {
+      "op": "DUP2"
+    },
+    "1122": {
+      "op": "MSTORE"
+    },
+    "1123": {
+      "op": "DUP9"
+    },
+    "1124": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1126": {
+      "op": "DUP5"
+    },
+    "1127": {
+      "op": "DUP8"
+    },
+    "1128": {
+      "op": "ADD"
+    },
+    "1129": {
+      "op": "ADD"
+    },
+    "1130": {
+      "op": "GT"
+    },
+    "1131": {
+      "op": "ISZERO"
+    },
+    "1132": {
+      "op": "PUSH2",
+      "value": "0x474"
+    },
+    "1135": {
+      "op": "JUMPI"
+    },
+    "1136": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1138": {
+      "op": "DUP1"
+    },
+    "1139": {
+      "op": "REVERT"
+    },
+    "1140": {
+      "op": "JUMPDEST"
+    },
+    "1141": {
+      "op": "DUP3"
+    },
+    "1142": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1144": {
+      "op": "DUP7"
+    },
+    "1145": {
+      "op": "ADD"
+    },
+    "1146": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1148": {
+      "op": "DUP4"
+    },
+    "1149": {
+      "op": "ADD"
+    },
+    "1150": {
+      "op": "CALLDATACOPY"
+    },
+    "1151": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1153": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1155": {
+      "op": "DUP5"
+    },
+    "1156": {
+      "op": "DUP4"
+    },
+    "1157": {
+      "op": "ADD"
+    },
+    "1158": {
+      "op": "ADD"
+    },
+    "1159": {
+      "op": "MSTORE"
+    },
+    "1160": {
+      "op": "DUP1"
+    },
+    "1161": {
+      "op": "SWAP6"
+    },
+    "1162": {
+      "op": "POP"
+    },
+    "1163": {
+      "op": "POP"
+    },
+    "1164": {
+      "op": "POP"
+    },
+    "1165": {
+      "op": "POP"
+    },
+    "1166": {
+      "op": "POP"
+    },
+    "1167": {
+      "op": "POP"
+    },
+    "1168": {
+      "op": "SWAP3"
+    },
+    "1169": {
+      "op": "POP"
+    },
+    "1170": {
+      "op": "SWAP3"
+    },
+    "1171": {
+      "op": "SWAP1"
+    },
+    "1172": {
+      "op": "POP"
+    },
+    "1173": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1174": {
+      "op": "JUMPDEST"
+    },
+    "1175": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1177": {
+      "op": "DUP1"
+    },
+    "1178": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "1180": {
+      "op": "DUP4"
+    },
+    "1181": {
+      "op": "DUP6"
+    },
+    "1182": {
+      "op": "SUB"
+    },
+    "1183": {
+      "op": "SLT"
+    },
+    "1184": {
+      "op": "ISZERO"
+    },
+    "1185": {
+      "op": "PUSH2",
+      "value": "0x4A9"
+    },
+    "1188": {
+      "op": "JUMPI"
+    },
+    "1189": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1191": {
+      "op": "DUP1"
+    },
+    "1192": {
+      "op": "REVERT"
+    },
+    "1193": {
+      "op": "JUMPDEST"
+    },
+    "1194": {
+      "op": "PUSH2",
+      "value": "0x4B2"
+    },
+    "1197": {
+      "op": "DUP4"
+    },
+    "1198": {
+      "op": "PUSH2",
+      "value": "0x3A2"
+    },
+    "1201": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "1202": {
+      "op": "JUMPDEST"
+    },
+    "1203": {
+      "op": "SWAP5"
+    },
+    "1204": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1206": {
+      "op": "SWAP4"
+    },
+    "1207": {
+      "op": "SWAP1"
+    },
+    "1208": {
+      "op": "SWAP4"
+    },
+    "1209": {
+      "op": "ADD"
+    },
+    "1210": {
+      "op": "CALLDATALOAD"
+    },
+    "1211": {
+      "op": "SWAP4"
+    },
+    "1212": {
+      "op": "POP"
+    },
+    "1213": {
+      "op": "POP"
+    },
+    "1214": {
+      "op": "POP"
+    },
+    "1215": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1216": {
+      "op": "JUMPDEST"
+    },
+    "1217": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "1219": {
+      "op": "DUP2"
+    },
+    "1220": {
+      "op": "DUP2"
+    },
+    "1221": {
+      "op": "SHR"
+    },
+    "1222": {
+      "op": "SWAP1"
+    },
+    "1223": {
+      "op": "DUP3"
+    },
+    "1224": {
+      "op": "AND"
+    },
+    "1225": {
+      "op": "DUP1"
+    },
+    "1226": {
+      "op": "PUSH2",
+      "value": "0x4D4"
+    },
+    "1229": {
+      "op": "JUMPI"
+    },
+    "1230": {
+      "op": "PUSH1",
+      "value": "0x7F"
+    },
+    "1232": {
+      "op": "DUP3"
+    },
+    "1233": {
+      "op": "AND"
+    },
+    "1234": {
+      "op": "SWAP2"
+    },
+    "1235": {
+      "op": "POP"
+    },
+    "1236": {
+      "op": "JUMPDEST"
+    },
+    "1237": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1239": {
+      "op": "DUP3"
+    },
+    "1240": {
+      "op": "LT"
+    },
+    "1241": {
+      "op": "DUP2"
+    },
+    "1242": {
+      "op": "EQ"
+    },
+    "1243": {
+      "op": "ISZERO"
+    },
+    "1244": {
+      "op": "PUSH2",
+      "value": "0x4F5"
+    },
+    "1247": {
+      "op": "JUMPI"
+    },
+    "1248": {
+      "op": "PUSH4",
+      "value": "0x4E487B71"
+    },
+    "1253": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "1255": {
+      "op": "SHL"
+    },
+    "1256": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1258": {
+      "op": "MSTORE"
+    },
+    "1259": {
+      "op": "PUSH1",
+      "value": "0x22"
+    },
+    "1261": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "1263": {
+      "op": "MSTORE"
+    },
+    "1264": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "1266": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1268": {
+      "op": "REVERT"
+    },
+    "1269": {
+      "op": "JUMPDEST"
+    },
+    "1270": {
+      "op": "POP"
+    },
+    "1271": {
+      "op": "SWAP2"
+    },
+    "1272": {
+      "op": "SWAP1"
+    },
+    "1273": {
+      "op": "POP"
+    },
+    "1274": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1275": {
+      "op": "JUMPDEST"
+    },
+    "1276": {
+      "op": "PUSH4",
+      "value": "0x4E487B71"
+    },
+    "1281": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "1283": {
+      "op": "SHL"
+    },
+    "1284": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1286": {
+      "op": "MSTORE"
+    },
+    "1287": {
+      "op": "PUSH1",
+      "value": "0x32"
+    },
+    "1289": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "1291": {
+      "op": "MSTORE"
+    },
+    "1292": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "1294": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1296": {
+      "op": "REVERT"
+    }
+  },
+  "sha1": "7a34dc1eb710f1751ff6a7d6875e0e3a8dcbbd9c",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\ncontract NftToken {\n    struct Nft {\n        address owner;\n        string nftName;\n        uint specialId;\n    }\n    Nft[] public nftList;\n\n    function create(address _owner, string memory _nftName) public {\n        uint _specialId = nftList.length;\n        nftList.push(Nft(_owner, _nftName, _specialId));\n    }\n\n    function sellToken(address _addr, uint _index) public {\n        Nft storage nft = nftList[_index];\n        nft.owner = _addr;\n    }\n\n    function nftListLength() public view returns(uint){\n        return nftList.length;\n    }\n}",
+  "sourceMap": "58:547:0:-:0;;;;;;;;;;;;;;;;;;;",
+  "sourcePath": "contracts/NftToken.sol",
+  "type": "contract"
+}
